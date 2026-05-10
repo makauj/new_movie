@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">api.cineby.sc</domain>
+        <domain includeSubdomains="true">*.firebaseio.com</domain>
+        <domain includeSubdomains="true">*.firebaseapp.com</domain>
+    </domain-config>
+    
+    <backup-rules>
+        <!-- Backup database files -->
+        <include domain="database" path="moviestream_db" />
+        <!-- Backup shared preferences -->
+        <include domain="sharedpref" path="user_preferences.xml" />
+    </backup-rules>
+    
+    <restore-rules>
+        <!-- Allow restoring database and preferences -->
+        <exclude domain="database" path="moviestream_db" />
+        <exclude domain="sharedpref" path="user_preferences.xml" />
+    </restore-rules>
+</data-extraction-rules>
