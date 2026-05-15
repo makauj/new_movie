@@ -11,7 +11,6 @@ android {
 
     defaultConfig {
         minSdk = 24
-        targetSdk = 34
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -22,6 +21,12 @@ android {
 
     kotlinOptions {
         jvmTarget = "17"
+    }
+    lint {
+        targetSdk = 34
+    }
+    testOptions {
+        targetSdk = 34
     }
 }
 
@@ -37,8 +42,8 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
 
     // Hilt
-    implementation("com.google.dagger:hilt-android:2.48")
-    kapt("com.google.dagger:hilt-compiler:2.48")
+    implementation("com.google.dagger:hilt-android:2.51.1")
+    kapt("com.google.dagger:hilt-compiler:2.51.1")
 
     // Testing
     testImplementation("junit:junit:4.13.2")

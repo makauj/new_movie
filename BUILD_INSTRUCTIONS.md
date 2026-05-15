@@ -249,7 +249,7 @@ rm -rf .gradle
 
 ### Create Local Properties
 
-Create `local.properties` (gitignored):
+Create `local.properties` (gitignore):
 
 ```properties
 sdk.dir=/Users/your-user/Library/Android/sdk
@@ -258,7 +258,7 @@ ndk.dir=/Users/your-user/Library/Android/ndk
 
 ### Set API Keys
 
-Create `gradle.properties` (gitignored):
+Create `gradle.properties` (gitignore):
 
 ```properties
 CINEBY_API_KEY=your_api_key_here

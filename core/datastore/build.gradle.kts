@@ -11,7 +11,6 @@ android {
 
     defaultConfig {
         minSdk = 24
-        targetSdk = 34
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -22,6 +21,12 @@ android {
 
     kotlinOptions {
         jvmTarget = "17"
+    }
+    lint {
+        targetSdk = 34
+    }
+    testOptions {
+        targetSdk = 34
     }
 }
 
